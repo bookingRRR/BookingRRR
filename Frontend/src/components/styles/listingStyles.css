@@ -1,0 +1,9 @@
+.listing-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+}
+
+.listing-container h6{
+    display: inline;
+}

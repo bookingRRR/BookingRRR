@@ -1,0 +1,35 @@
+#contactus-section{
+    height: 90vh;
+    display: grid;
+
+    background-color: #272829;
+}
+
+.contactus-container{
+    width: 80%;
+    margin: auto;
+    align-self: center;
+    color: #dddce0;
+}
+
+.contactus-container h2{
+    text-align: center;
+}
+
+.contactus-container a{
+    color: #fff;
+}
+
+.contactus-container a:hover{
+    color: #D8D9DA;
+}
+
+.contacts-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.icon{
+    font-size: 2.5rem;
+    justify-self: center;
+}

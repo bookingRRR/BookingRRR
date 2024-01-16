@@ -1,0 +1,22 @@
+.searchResults-section{
+    padding: 2rem 0;
+}
+
+.searchResults-container{
+    width: 80%;
+    margin: auto;
+}
+
+.searchResults-container h3{
+    text-align: center;
+}
+
+.result{
+    margin: 0.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.pagination-container{
+    display: grid;
+    justify-items: center;
+}

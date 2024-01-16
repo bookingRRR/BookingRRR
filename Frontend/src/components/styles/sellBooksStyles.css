@@ -1,0 +1,59 @@
+#sellbooks-section {
+    min-height: 100vh;
+    padding: 20vh 20px 10vh;
+
+    display: grid;
+  
+    background-color: #272829;
+  }
+  
+  .sellbooks-container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+  
+    padding: 1rem;
+
+    align-self: center;
+  
+    background-color: #D8D9DA;
+  }
+  
+  .sellbooks-container h2 {
+    text-align: center;
+  }
+  
+  .sellBooks-form input,
+  .sellBooks-form button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  .sellBooks-form button {
+    cursor: pointer;
+    padding: 10px 0;
+    border-radius: 10px;
+    border-style: none;
+    background-color: blanchedalmond;
+    /* color: white; */
+  }
+  
+  /* .sellBooks-form button:hover {
+    background-color: rgba(255, 237, 211, 0.434);
+  } */
+  
+  .condition-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  .condition-container select,
+  .condition-container label {
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  

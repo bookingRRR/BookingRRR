@@ -1,0 +1,33 @@
+.hero-section {
+    min-height: 100vh;
+    padding: 20vh 20px 10vh;
+  
+    background-color: #faf0e6;
+    background-image: linear-gradient(to bottom, #272829, #dddce0);
+
+  }
+  
+  .hero-container {
+    width: 80%;
+    margin: auto;
+    color: #fff;
+    display: grid;
+    align-items: center;
+  }
+  
+  .hero-container p {
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+  }
+  
+  .mission {
+    display: none;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .mission {
+      display: block;
+    }
+  }
+  

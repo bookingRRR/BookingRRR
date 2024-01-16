@@ -1,0 +1,23 @@
+#listedBooks-section{
+    padding: 2rem 0;
+}
+
+.listedBooks-container{
+    width: 80%;
+    margin: auto;
+}
+
+.listedBooks-container h3{
+    color: #fff;
+    text-align: center;
+}
+
+.listing{
+    margin: 0.5rem;
+    padding: 1rem , 0.5rem;
+}
+
+.pagination-container{
+    display: grid;
+    justify-items: center;
+}
