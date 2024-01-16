@@ -29,7 +29,7 @@ function BuyBooks() {
 
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/getBooks?title=${bookQuery}&author=${authorQuery}`
+        `${process.env.REACT_APP_BASE_URL}api/getBooks?title=${bookQuery}&author=${authorQuery}`
       );
 
       console.log(response.data.books);

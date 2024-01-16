@@ -8,10 +8,10 @@ import { useState } from "react";
 
 const getListings = async () => {
   try {
-
+    console.log(process.env.REACT_APP_BASE_URL)
     console.log("Get Call");
     const response = await axios.get(
-      `http://localhost:4000/api/getBooksEmail?email=${localStorage.getItem(
+      `${process.env.REACT_APP_BASE_URL}api/getBooksEmail?email=${localStorage.getItem(
         "userEmail"
       )}`
     );
@@ -82,7 +82,7 @@ function SellBooks() {
 
     try {
       let submittedData = await axios.post(
-        "http://localhost:4000/api/addBook",
+        `${process.env.REACT_APP_BASE_URL}/api/addBook`,
         {
           title: title,
           author: author,

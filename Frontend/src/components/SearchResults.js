@@ -98,7 +98,7 @@ function SearchResults(props) {
   //res will receive the results from the backend
   async function getSearchResults() {
     const res = await axios.get(
-      `http://localhost:4000/api/getBooks?title=${bookQuery}&author=${authorQuery}`
+      `${process.env.REACT_APP_BASE_URL}/api/getBooks?title=${bookQuery}&author=${authorQuery}`
     );
     console.log(res.data.books);
     setSearchResults(res);
@@ -156,7 +156,7 @@ function SearchResults(props) {
                       title={res.title}
                       author={res.author}
                       edition={res.edition}
-                      contact={res.contact}
+                      contact={res.email}
                       condition={res.condition}
                     />
                   </ListGroup.Item>

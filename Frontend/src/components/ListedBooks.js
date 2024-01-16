@@ -5,88 +5,6 @@ import { Pagination, ListGroup } from "react-bootstrap";
 import Listing from "./Listing";
 import "./styles/listedBooksStyles.css";
 
-// const dummyListings = [
-//   {
-//     id: 1,
-//     title: "The Catcher in the Rye",
-//     author: "J.D. Salinger",
-//     edition: 1951,
-//     contact: "john.doe@example.com",
-//     condition: "Like New",
-//   },
-//   {
-//     id: 2,
-//     title: "To Kill a Mockingbird",
-//     author: "Harper Lee",
-//     edition: 1960,
-//     contact: "jane.smith@example.com",
-//     condition: "Good",
-//   },
-//   {
-//     id: 3,
-//     title: "1984",
-//     author: "George Orwell",
-//     edition: 1949,
-//     contact: "bob.jones@example.com",
-//     condition: "Very Good",
-//   },
-//   {
-//     id: 4,
-//     title: "The Great Gatsby",
-//     author: "F. Scott Fitzgerald",
-//     edition: 1925,
-//     contact: "mary.wilson@example.com",
-//     condition: "Like New",
-//   },
-//   {
-//     id: 5,
-//     title: "Brave New World",
-//     author: "Aldous Huxley",
-//     edition: 1932,
-//     contact: "sam.brown@example.com",
-//     condition: "Acceptable",
-//   },
-//   {
-//     id: 6,
-//     title: "Lord of the Rings",
-//     author: "J.R.R. Tolkien",
-//     edition: 1954,
-//     contact: "emma.davis@example.com",
-//     condition: "Acceptable",
-//   },
-//   {
-//     id: 7,
-//     title: "Pride and Prejudice",
-//     author: "Jane Austen",
-//     edition: 1813,
-//     contact: "chris.evans@example.com",
-//     condition: "Like New",
-//   },
-//   {
-//     id: 8,
-//     title: "The Hobbit",
-//     author: "J.R.R. Tolkien",
-//     edition: 1937,
-//     contact: "olivia.white@example.com",
-//     condition: "Very Good",
-//   },
-//   {
-//     id: 9,
-//     title: "The Shining",
-//     author: "Stephen King",
-//     edition: 1977,
-//     contact: "alex.miller@example.com",
-//     condition: "Like New",
-//   },
-//   {
-//     id: 10,
-//     title: "The Da Vinci Code",
-//     author: "Dan Brown",
-//     edition: 2003,
-//     contact: "michael.jordan@example.com",
-//     condition: "Good",
-//   },
-// ];
 
 function ListedBooks(props) {
   //for getting the listings
@@ -111,7 +29,7 @@ function ListedBooks(props) {
 
     try {
       let deleted = await axios.delete(
-        `http://localhost:4000/api/deleteBookById?id=${idToBeDeleted}`
+        `${process.env.REACT_APP_BASE_URL}api/deleteBookById?id=${idToBeDeleted}`
       );
 
       console.log("Array after deleted" ,  deleted);
