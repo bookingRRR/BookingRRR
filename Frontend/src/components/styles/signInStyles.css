@@ -14,7 +14,7 @@
 .signIn-container{
     padding: 2rem 0;
     
-    background-color: #dddce0;
+    background-color: rgba(221, 220, 224 , 0.4);
 
     border-radius: 20px;
 
@@ -27,6 +27,7 @@ h3{
     padding:0 1rem;
 
     margin-bottom: 2rem;
+    color: #fff;
 }
 
 /* @media screen and (max-width: 600px){
