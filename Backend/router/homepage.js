@@ -3,6 +3,7 @@ const Book = require('../models/books');
 
 router.get('/getBooks', async (req, res) => {
     try{
+        console.log("getBooksCalled route called")
         let title = req.query.title;
         let author = req.query.author;
         const titleRegex = new RegExp(`.*${title}.*`, 'i');
@@ -16,6 +17,7 @@ router.get('/getBooks', async (req, res) => {
 })
 router.get('/getBooksEmail', async (req, res) => {
     try{
+        console.log("getBooksEmail route called")
         let books = await Book.find({email:req.query.email})
         console.log("BOOKs ", books)
         return res.status(200).json({books: books})
@@ -26,6 +28,7 @@ router.get('/getBooksEmail', async (req, res) => {
 })
 router.post('/addBook', async (req, res) => {
     try{
+        console.log("addBook route called")
         let body = req.body;
         const book = new Book({
             title: body.title,
@@ -43,6 +46,7 @@ router.post('/addBook', async (req, res) => {
 })
 router.delete('/deleteBookById', async (req, res) => {
     try{
+        console.log("deleteBookById route called")
         let id = req.query.id;
         await Book.findByIdAndDelete(id)
         return res.status(200).json({message: "Book deleted successfully"})
