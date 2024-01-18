@@ -5,7 +5,7 @@ import App from "./App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
-
+console.log(process.env.REACT_APP_GOOGLE_OAUTH);
 root.render(
     <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_OAUTH}>
         <App />
