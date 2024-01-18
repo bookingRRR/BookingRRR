@@ -21,6 +21,7 @@ app.use(express.json());
 const homepageRouter = require('./router/homepage');
 
 app.get('/test', (req, res) => {
+    console.log("WORKING API🥳")
     res.send('Hello World!');
 })
 app.use('/api', homepageRouter);
