@@ -160,7 +160,7 @@ function SellBooks() {
 
       <h3 style={{color:"#fff" , marginTop:"3em"}}>Books listed by you</h3>
 
-      {listings.length === 0 ? (
+      {listings?.length === 0 ? (
         <div
           className="listing"
           style={{
