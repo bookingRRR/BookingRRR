@@ -19,7 +19,12 @@ function Navbar() {
       setIsMenuOpen(true);
     }
   });
-
+  function handleLogout(event){
+    event.preventDefault();
+    //rmeove emaill from cookies not local storage
+    document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    window.location.href = "/";
+  }
   return (
     <nav>
       <div className="nav-content">
@@ -53,6 +58,9 @@ function Navbar() {
             </li>
             <li>
               <a href="#contactus-section">Contact Us</a>
+            </li>
+            <li>
+              <button className="logoutButton" onClick={handleLogout}>Logout</button>
             </li>
           </ul>
         )}

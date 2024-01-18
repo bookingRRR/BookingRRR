@@ -49,8 +49,7 @@ nav {
   .nav-links {
     list-style: none;
     padding: 10px 0;
-  
-    width: 200%;
+    width: 170%;
   }
   
   .nav-links li {
@@ -76,6 +75,13 @@ nav {
     color: white;
     cursor: pointer;
   }
+  .logoutButton{
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #b7b7b7;
+  }
   
   @media screen and (min-width: 600px) {
     .list-btn {
@@ -91,7 +97,7 @@ nav {
       margin-left: auto;
   
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
   
     .nav-links li {
