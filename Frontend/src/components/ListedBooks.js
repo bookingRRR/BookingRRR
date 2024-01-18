@@ -79,7 +79,7 @@ function ListedBooks(props) {
     <section id="listedBooks-section">
       <div className="listedBooks-container">
         <div className="listings">
-          {currentItems.map((res) => {
+          {currentItems?.map((res) => {
             return (
               <ListGroup>
                 <ListGroup.Item className="listing">
@@ -94,9 +94,8 @@ function ListedBooks(props) {
                   />
                 </ListGroup.Item>
               </ListGroup>
-            );
+            )
           })}
-          ;
         </div>
 
         <div className="pagination-container">
