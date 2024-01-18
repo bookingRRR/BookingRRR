@@ -82,7 +82,7 @@ function SellBooks() {
 
     try {
       let submittedData = await axios.post(
-        `${process.env.REACT_APP_BASE_URL}/api/addBook`,
+        `${process.env.REACT_APP_BASE_URL}api/addBook`,
         {
           title: title,
           author: author,
