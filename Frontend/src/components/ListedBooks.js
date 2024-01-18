@@ -67,7 +67,7 @@ function ListedBooks(props) {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
 
-  const currentItems = listings.slice(startIndex, endIndex);
+  const currentItems = listings?.slice(startIndex, endIndex);
 
   const totalPages = Math.ceil(listings.length / itemsPerPage);
 
