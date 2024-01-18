@@ -5,7 +5,7 @@ function ContactUs() {
     <section id="contactus-section">
       <div className="contactus-container">
         <h2>Contact Us!</h2>
-        <p>
+        <p className="contactUsText">
           {" "}
           Do not hesitate to get in touch should you have any further queries or
           concerns.
