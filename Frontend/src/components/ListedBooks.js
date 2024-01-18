@@ -100,7 +100,7 @@ function ListedBooks(props) {
 
         <div className="pagination-container">
           <Pagination>
-            {[...Array(totalPages)].map((_, index) => (
+            {[...Array(totalPages?totalPages:[])].map((_, index) => (
               <Pagination.Item
                 key={index + 1}
                 active={index + 1 === currentPage}
