@@ -71,7 +71,8 @@ nav {
   }
   
   .list-btn:hover,
-  .nav-links a:hover {
+  .nav-links a:hover,
+  .logoutButton:hover {
     color: white;
     cursor: pointer;
   }
@@ -80,7 +81,7 @@ nav {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #b7b7b7;
+    color: #eaeaea;
   }
   
   @media screen and (min-width: 600px) {

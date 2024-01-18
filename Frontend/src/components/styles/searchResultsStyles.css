@@ -11,9 +11,16 @@
     text-align: center;
 }
 
+/* .results{
+    display: grid;
+    justify-items: center;
+} */
+
 .result{
     margin: 0.5rem;
     padding: 1rem 0.5rem;
+    /* width: 300px; */
+    overflow: auto;
 }
 
 .pagination-container{
