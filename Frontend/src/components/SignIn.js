@@ -47,7 +47,7 @@ export default function SignIn() {
           }}
           onError={() => {
             console.log("Login Failed");
-            alert("LogIn failed");
+            alert("LogIn failed 💀");
           }}
         />
       </div>

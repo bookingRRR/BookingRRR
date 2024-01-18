@@ -36,7 +36,7 @@ function BuyBooks() {
 
       setSearchResults(response.data.books);
     } catch (error) {
-      alert("Something went wrong [:-(]");
+      alert("Something went wrong 😪");
     }
   };
 
@@ -111,7 +111,7 @@ function BuyBooks() {
                     textAlign: "center",
                   }}
                 >
-                  No results (:"-|)
+                  No results 😔
                 </div>
               ) : (
                 <SearchResults1 result={searchResults} />

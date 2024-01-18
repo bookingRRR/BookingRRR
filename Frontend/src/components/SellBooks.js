@@ -19,7 +19,7 @@ const getListings = async () => {
     return response.data.books;
 
   } catch (error) {
-    alert("Something went wrong [:-(]");
+    alert("Something went wrong 😪");
   }
 };
 
@@ -70,7 +70,7 @@ function SellBooks() {
   };
 
   const updateListings = async () => {
-    alert("Deleted!");
+    alert("Deleted Successfully 🚮");
     const newListings = await getListings();
     setListings(newListings);
   }
@@ -99,9 +99,9 @@ function SellBooks() {
 
       console.log("Received = ", data);
 
-      alert("Submitted [:-)]");
+      alert("Submitted 😄");
     } catch (error) {
-      alert("Something went wrong [:-(]");
+      alert("Something went wrong 😪");
     }
 
     setTitle("");

@@ -143,7 +143,7 @@ function SearchResults(props) {
               textAlign: "center",
             }}
           >
-            No results (:"-|)
+            No results 😔
           </div>
         ) : (
           <div className="results">
