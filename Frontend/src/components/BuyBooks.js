@@ -24,7 +24,6 @@ function BuyBooks() {
   const onFormSubmit = async (event) => {
     event.preventDefault();
 
-    console.log("Form submitted", bookQuery, authorQuery);
     setSubmitted(true);
 
     try {
@@ -32,7 +31,6 @@ function BuyBooks() {
         `${process.env.REACT_APP_BASE_URL}api/getBooks?title=${bookQuery}&author=${authorQuery}`
       );
 
-      console.log(response.data.books);
 
       setSearchResults(response.data.books);
     } catch (error) {
@@ -42,7 +40,6 @@ function BuyBooks() {
 
   // const onFormSubmit = (event) => {
   //   event.preventDefault();
-  //   console.log("Search form submitted");
   //   setSubmitted(!submitted);
   //   // setBookQuery("");
   //   // setAuthorQuery("");

@@ -20,14 +20,11 @@ export default function App() {
 
   const userValue = getCookie("email");
 
-  if (userValue != null) {
-    console.log(userValue);
-      
+  if (userValue != null) {    
     return (
         <HomePage/>
     );
   } else {
-    console.log("New User");
     return <SignIn />;
   }
 

@@ -25,18 +25,15 @@ function ListedBooks(props) {
 
   //update the listings array on deletion
   const handleDelete = async (idToBeDeleted) => {
-    console.log("Delete ", idToBeDeleted);
 
     try {
       let deleted = await axios.delete(
         `${process.env.REACT_APP_BASE_URL}api/deleteBookById?id=${idToBeDeleted}`
       );
 
-      console.log("Array after deleted" ,  deleted);
 
       updateListings();
     } catch (error) {
-      console.log("Something went wrong!! [:-(]");
     }
   };
 

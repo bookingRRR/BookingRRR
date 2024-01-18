@@ -100,14 +100,11 @@ function SearchResults(props) {
     const res = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/api/getBooks?title=${bookQuery}&author=${authorQuery}`
     );
-    console.log(res.data.books);
     setSearchResults(res);
   }
   getSearchResults();
 
   const empty = searchResults.length === 0;
-  console.log(searchResults);
-  console.log(searchResults.length);
 
   //for pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -123,7 +120,6 @@ function SearchResults(props) {
   }
 
   const totalPages = Math.ceil(searchResults.length / itemsPerPage);
-  console.log("Total pages = ",totalPages);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);

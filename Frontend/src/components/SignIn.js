@@ -21,10 +21,8 @@ export default function SignIn() {
   }
 
   useEffect(() => {
-    console.log("Effect ran.Value=", flag);
 
     return () => {
-      console.log("Clean up function run");
     };
   }, [flag]);
 
@@ -38,15 +36,11 @@ export default function SignIn() {
         <GoogleLogin
           onSuccess={(credentialResponse) => {
             const decoded = jwtDecode(credentialResponse.credential);
-            console.log("Initial value", flag);
-            console.log(decoded);
-            console.log(decoded.email);
             setCookie("email", decoded.email, 1);
             localStorage.setItem("userEmail", decoded.email);
             setFlag(!flag);
           }}
           onError={() => {
-            console.log("Login Failed");
             alert("LogIn failed 💀");
           }}
         />

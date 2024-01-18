@@ -7,7 +7,6 @@ import "./styles/searchResultsStyles.css";
 
 function NoSearchResults(props) {
   const searchResults = props.result;
-  console.log("TBD", searchResults);
 
   //for pagination
   const [currentPage, setCurrentPage] = useState(1);

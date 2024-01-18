@@ -8,8 +8,6 @@ import { useState } from "react";
 
 const getListings = async () => {
   try {
-    console.log(process.env.REACT_APP_BASE_URL)
-    console.log("Get Call");
     const response = await axios.get(
       `${process.env.REACT_APP_BASE_URL}api/getBooksEmail?email=${localStorage.getItem(
         "userEmail"
@@ -36,8 +34,6 @@ function SellBooks() {
   
 
   const [listings, setListings] = useState([]);
-  console.log(typeof listings);
-  console.log(listings);
 
   const initCall = async () => {
     const res = await getListings();
@@ -91,13 +87,11 @@ function SellBooks() {
           email: localStorage.getItem("userEmail"),
         }
       );
-      console.log("Submitted = ", submittedData);
 
       const response = await getListings();
       const data = response;
       setListings(data);
 
-      console.log("Received = ", data);
 
       alert("Submitted 😄");
     } catch (error) {
