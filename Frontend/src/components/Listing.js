@@ -19,9 +19,9 @@ function Listing(props) {
     <section className="listing-container" id={id}>
       <div className="info-container">
         <h4>
-          {title} <h6>By- {author}</h6>
+          {title} <br/> <h6>By - {author}</h6>
         </h4>
-        <p>{edition} edition</p>
+        <p>Edition - {edition}</p>
       </div>
 
       <div className="deleteBtn-container">
