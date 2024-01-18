@@ -77,7 +77,7 @@ function SellBooks() {
     event.preventDefault();
 
     try {
-      let submittedData = await axios.post(
+      await axios.post(
         `${process.env.REACT_APP_BASE_URL}api/addBook`,
         {
           title: title,
@@ -87,15 +87,12 @@ function SellBooks() {
           email: localStorage.getItem("userEmail"),
         }
       );
-
       const response = await getListings();
       const data = response;
       setListings(data);
-
-
       alert("Submitted 😄");
     } catch (error) {
-      alert("Something went wrong 😪");
+      alert("Something went wrong 😪: ", error);
     }
 
     setTitle("");
