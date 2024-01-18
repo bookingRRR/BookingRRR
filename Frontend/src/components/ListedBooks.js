@@ -69,7 +69,7 @@ function ListedBooks(props) {
 
   const currentItems = listings?.slice(startIndex, endIndex);
 
-  const totalPages = Math.ceil(listings.length / itemsPerPage);
+  const totalPages = Math.ceil(listings?.length / itemsPerPage);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
