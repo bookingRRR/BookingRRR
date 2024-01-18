@@ -38,7 +38,7 @@ function NoSearchResults(props) {
                     title={res.title}
                     author={res.author}
                     edition={res.edition}
-                    contact={localStorage.getItem("userEmail")}
+                    contact={res.email}
                     condition={res.condition}
                   />
                 </ListGroup.Item>
