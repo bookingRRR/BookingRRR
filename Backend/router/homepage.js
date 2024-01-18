@@ -19,7 +19,6 @@ router.get('/getBooksEmail', async (req, res) => {
     try{
         console.log("getBooksEmail route called")
         let books = await Book.find({email:req.query.email})
-        console.log("BOOKs ", books)
         return res.status(200).json({books: books})
     }catch(err){
         console.log(err)
