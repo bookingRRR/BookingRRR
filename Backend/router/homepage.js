@@ -34,7 +34,8 @@ router.post('/addBook', async (req, res) => {
             author: body.author,
             edition: body.edition,
             condition: body.condition,
-            email: body.email
+            email: body.email,
+            phoneNo: body.phoneNo
         })
         await book.save()
         return res.status(200).json({message: "Book added successfully"})

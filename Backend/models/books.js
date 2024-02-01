@@ -8,6 +8,7 @@ const bookSchema = new Schema({
     edition: {type: String},
     condition: {type: String},
     email: {type: String},
+    phoneNo: {type: Number},
 })
 
 const Book = mongoose.model('book_schema', bookSchema);

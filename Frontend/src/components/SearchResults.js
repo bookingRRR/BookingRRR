@@ -99,7 +99,8 @@ function SearchResults(props) {
   async function getSearchResults() {
     const res = await axios.get(
       `${process.env.REACT_APP_BASE_URL}/api/getBooks?title=${bookQuery}&author=${authorQuery}`
-    );
+    );    
+    console.log("RES: ", res.data);
     setSearchResults(res);
   }
   getSearchResults();
@@ -154,6 +155,7 @@ function SearchResults(props) {
                       edition={res.edition}
                       contact={res.email}
                       condition={res.condition}
+                      phoneNo={res.phoneNo}
                     />
                   </ListGroup.Item>
                 </ListGroup>

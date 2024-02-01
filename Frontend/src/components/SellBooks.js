@@ -29,6 +29,7 @@ function SellBooks() {
   const [author, setAuthor] = useState("");
   const [edition, setEdition] = useState("");
   const [condition, setCondition] = useState("Like New");
+  const [phoneNo, setphoneNo] = useState();
 
 
   
@@ -64,6 +65,9 @@ function SellBooks() {
   const handleConditionChange = (event) => {
     setCondition(event.target.value);
   };
+  const handlephoneNoChange = (event) => {
+    setphoneNo(event.target.value);
+  };
 
   const updateListings = async () => {
     alert("Deleted Successfully 🚮");
@@ -85,6 +89,7 @@ function SellBooks() {
           edition: edition,
           condition: condition,
           email: localStorage.getItem("userEmail"),
+          phoneNo: phoneNo
         }
       );
       const response = await getListings();
@@ -99,6 +104,7 @@ function SellBooks() {
     setAuthor("");
     setEdition("");
     setCondition("Like New");
+    setphoneNo("Contact No.");
   };
 
   return (
@@ -136,6 +142,14 @@ function SellBooks() {
             value={edition}
             onChange={handleEditionChange}
             placeholder="Edition(yyyy)"
+          />
+          <input
+            type="text"
+            id="phoneNo"
+            name="phoneNo"
+            value={phoneNo}
+            onChange={handlephoneNoChange}
+            placeholder="Contact No.(Optional)"
           />
 
           <div className="condition-container">

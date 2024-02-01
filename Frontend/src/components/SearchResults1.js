@@ -39,6 +39,7 @@ function NoSearchResults(props) {
                     edition={res.edition}
                     contact={res.email}
                     condition={res.condition}
+                    phoneNo={res.phoneNo}
                   />
                 </ListGroup.Item>
               </ListGroup>
